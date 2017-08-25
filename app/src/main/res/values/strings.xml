@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleNotification</string>
+    <string name="screen_desc">Enter Notification Title, its description and hit button to Fire Notification</string>
+    <string name="enter_notification_title">Enter Notification Title</string>
+    <string name="title">title</string>
+    <string name="enter_notification_desc">Enter Notification Desc</string>
+    <string name="description">description</string>
+    <string name="fire_small_notification">Fire Small Notification</string>
+    <string name="fire_big_notification">Fire Big Notification</string>
+    <string name="fire_group_notification">Fire Group Notification</string>
+    <string name="success">Success</string>
+</resources>
