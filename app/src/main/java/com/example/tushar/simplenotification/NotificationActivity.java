@@ -92,11 +92,11 @@ public class NotificationActivity extends AppCompatActivity {
         builder.setContentText(notiDesc.getText().toString());
 
         Bitmap bitmap_image = BitmapFactory.decodeResource(NotificationActivity.this.getResources(), R.mipmap.ic_launcher);
-        NotificationCompat.BigPictureStyle s = new NotificationCompat.BigPictureStyle().bigPicture(bitmap_image);
+        NotificationCompat.BigPictureStyle bigPictureStyle = new NotificationCompat.BigPictureStyle().bigPicture(bitmap_image);
 
-        s.setBigContentTitle(notiTitle.getText().toString());
-        s.setSummaryText(notiDesc.getText().toString());
-        builder.setStyle(s);
+        bigPictureStyle.setBigContentTitle(notiTitle.getText().toString());
+        bigPictureStyle.setSummaryText(notiDesc.getText().toString());
+        builder.setStyle(bigPictureStyle);
 
         Intent notificationIntent = new Intent(getApplicationContext(), SuccessActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent,
@@ -105,7 +105,6 @@ public class NotificationActivity extends AppCompatActivity {
 
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(0, builder.build());
-        manager.cancel(0);
     }
 
     /**
